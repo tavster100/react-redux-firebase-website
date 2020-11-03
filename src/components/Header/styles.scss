@@ -35,16 +35,21 @@
                 padding: 0;
             }
             li {
+                display: inline-block;
                 list-style-type: none;
+                margin-right: 1.5rem;
             }
-            a {
+            &:last-child {
+                margin-right: 0;
+            }
+            a,
+            button {
                 font-size: 1.8rem;
                 line-height: 1;
                 color: black;
-                background-color: gray;
+                background-color: #28208d;
                 text-decoration: none;
                 text-transform: uppercase;
-                border: 2px groove black;
             }
         }
     }

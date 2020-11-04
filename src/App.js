@@ -10,6 +10,7 @@ import HomepageLayout from './layouts/HomepageLayout'
 import Homepage from './pages/Homepage'
 import './default.scss'
 import Login from './pages/Login'
+import Recovery from './pages/Recovery'
 import Registration from './pages/Registration'
 
 const initalState = {
@@ -82,6 +83,14 @@ class App extends Component {
                 </MainLayout>
               )
             }
+          />
+          <Route
+            path="/recovery"
+            render={() => (
+              <MainLayout>
+                <Recovery />{' '}
+              </MainLayout>
+            )}
           />
         </Switch>
       </div>

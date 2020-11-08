@@ -1,20 +1,39 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { resetAllAuthForms, signUpUser } from './../../redux/User/user.actions'
 import './styles.scss'
-
-import { auth, handleUserProfile } from './../../firebase/utils'
 
 import AuthWrapper from './../AuthWrapper'
 import FormInput from './../forms/FormInput'
 import Button from './../forms/Button'
 
+const mapState = ({ user }) => ({
+  signUpSucces: user.signUpSucces,
+  signUpError: user.signUpError,
+})
 const Signup = (props) => {
+  const { signUpSucces, signUpError } = useSelector(mapState)
+  const dispatch = useDispatch()
   const [displayName, setDisplayName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [errors, setErrors] = useState([])
+
+  useEffect(() => {
+    if (signUpSucces) {
+      reset()
+      dispatch(resetAllAuthForms())
+      props.history.push('/')
+    }
+  }, [signUpSucces])
+
+  useEffect(() => {
+    if (Array.isArray(signUpError) && signUpError.length > 0) {
+      setErrors(signUpError)
+    }
+  }, [signUpError])
 
   const reset = () => {
     setDisplayName('')
@@ -23,24 +42,16 @@ const Signup = (props) => {
     setConfirmPassword('')
     setErrors([])
   }
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault()
-    if (password !== confirmPassword) {
-      const err = ["Password Don't Match"]
-      setErrors(err)
-      return
-    }
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
+    dispatch(
+      signUpUser({
+        displayName,
         email,
         password,
-      )
-      await handleUserProfile(user, { displayName })
-      reset()
-      props.history.push('/')
-    } catch (err) {
-      //console.log(err);
-    }
+        confirmPassword,
+      }),
+    )
   }
   const configAuthWrapper = {
     headline: 'Registration',

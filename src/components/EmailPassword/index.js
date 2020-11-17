@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
-  resetPassword,
-  resetAllAuthForms,
+  resetPasswordStart,
+  resetUserState,
 } from './../../redux/User/user.actions'
-import { withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import './styles.scss'
 import AuthWrapper from './../AuthWrapper'
 import FormInput from './../forms/FormInput'
@@ -12,30 +12,31 @@ import Button from './../forms/Button'
 
 const mapState = ({ user }) => ({
   resetPasswordSucces: user.resetPasswordSucces,
-  resetPasswordError: user.resetPasswordError,
+  userErr: user.userErr,
 })
-const EmailPassword = (props) => {
-  const { resetPasswordSucces, resetPasswordError } = useSelector(mapState)
+const EmailPassword = () => {
   const dispatch = useDispatch()
+  const history = useHistory()
+  const { resetPasswordSucces, userErr } = useSelector(mapState)
   const [email, setEmail] = useState('')
   const [errors, setErrors] = useState([])
 
   useEffect(() => {
     if (resetPasswordSucces) {
-      dispatch(resetAllAuthForms())
-      props.history.push('/login')
+      dispatch(resetUserState())
+      history.push('/login')
     }
   }, [resetPasswordSucces])
 
   useEffect(() => {
-    if (Array.isArray(resetPasswordError) && resetPasswordError.length > 0) {
-      setErrors(resetPasswordError)
+    if (Array.isArray(userErr) && userErr.length > 0) {
+      setErrors(userErr)
     }
-  }, [resetPasswordError])
+  }, [userErr])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch(resetPassword({ email }))
+    dispatch(resetPasswordStart({ email }))
   }
 
   const configAuthWrapper = {
@@ -65,4 +66,4 @@ const EmailPassword = (props) => {
     </AuthWrapper>
   )
 }
-export default withRouter(EmailPassword)
+export default EmailPassword

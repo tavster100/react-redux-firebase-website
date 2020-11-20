@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Switch, Route } from 'react-router-dom'
-
 import { checkUserSession } from './redux/User/user.actions'
+
+//components
+import AdminToolbar from './components/AdminToolbar'
 
 // Higher Order Component
 import WithAuth from './hoc/withAuth'
+import WithAdminAuth from './hoc/withAdminAuth'
 
 // layouts
 import MainLayout from './layouts/MainLayout'
@@ -17,6 +20,7 @@ import './default.scss'
 import Login from './pages/Login'
 import Recovery from './pages/Recovery'
 import Registration from './pages/Registration'
+import Admin from './pages/Admin'
 import Dashboard from './pages/Dashboard'
 
 const App = () => {
@@ -24,10 +28,12 @@ const App = () => {
 
   useEffect(() => {
     dispatch(checkUserSession())
+    // eslint-disable-next-line
   }, [])
 
   return (
     <div className="App">
+      <AdminToolbar />
       <Switch>
         <Route
           exact
@@ -70,6 +76,16 @@ const App = () => {
                 <Dashboard />
               </MainLayout>
             </WithAuth>
+          )}
+        />
+        <Route
+          path="/admin"
+          render={() => (
+            <WithAdminAuth>
+              <MainLayout>
+                <Admin />
+              </MainLayout>
+            </WithAdminAuth>
           )}
         />
       </Switch>

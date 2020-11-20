@@ -26,6 +26,7 @@ const EmailPassword = () => {
       dispatch(resetUserState())
       history.push('/login')
     }
+    // eslint-disable-next-line
   }, [resetPasswordSucces])
 
   useEffect(() => {

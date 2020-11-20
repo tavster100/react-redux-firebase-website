@@ -31,6 +31,7 @@ const SignIn = () => {
       resetForm()
       history.push('/')
     }
+    // eslint-disable-next-line
   }, [currentUser])
 
   const handleSubmit = (e) => {

@@ -1,15 +1,17 @@
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
 const mapState = ({ user }) => ({
   currentUser: user.currentUser,
 })
 
-const useAuth = (props) => {
+const useAuth = () => {
   const { currentUser } = useSelector(mapState)
+  const history = useHistory()
   useEffect(() => {
     if (!currentUser) {
-      props.history.push('/login') // acces to history from ./hoc/withRouter
+      history.push('/login') // acces to history from ./hoc/withRouter
     }
     //eslint-disable-next-line
   }, [currentUser])

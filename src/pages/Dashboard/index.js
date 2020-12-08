@@ -3,6 +3,12 @@ import './styles.scss'
 
 // eslint-disable-next-line no-unused-vars
 const Dashboard = (props) => {
-  return <h1> Your logged in!</h1>
+  return (
+    <div className="profile">
+      <span role="img" aria-label="image">
+        Welcome to you`r profile ! ✋
+      </span>
+    </div>
+  )
 }
 export default Dashboard

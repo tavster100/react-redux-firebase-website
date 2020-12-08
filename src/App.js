@@ -18,6 +18,7 @@ import DashBoardLayout from './layouts/DashboardLayout'
 
 // pages
 import Homepage from './pages/Homepage'
+import Search from './pages/Search'
 import './default.scss'
 import Login from './pages/Login'
 import Recovery from './pages/Recovery'
@@ -44,6 +45,14 @@ const App = () => {
             <HomepageLayout>
               <Homepage />
             </HomepageLayout>
+          )}
+        />
+        <Route
+          path="/search"
+          render={() => (
+            <MainLayout>
+              <Search />
+            </MainLayout>
           )}
         />
         <Route

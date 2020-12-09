@@ -12,19 +12,11 @@ const Product = ({ ProductImageURL, productName, productPrice }) => {
         <img src={ProductImageURL} alt={productName} />
       </div>
       <div className="details">
-        <ul>
-          <li>
-            <span className="name">{productName}</span>
-          </li>
-          <li>
-            <span className="price">RON{productPrice}</span>
-          </li>
-          <li>
-            <div className="addToCart">
-              <Button {...configAddToCartBtn}>Add to cart</Button>
-            </div>
-          </li>
-        </ul>
+        <span className="name" title={productName}>{productName}</span>
+        <span className="price">RON{productPrice}</span>
+        <div className="addToCart">
+          <Button {...configAddToCartBtn}>Add to cart</Button>
+        </div>
       </div>
     </div>
   )

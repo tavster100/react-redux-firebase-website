@@ -50,8 +50,8 @@ const Admin = (props) => {
         ProductImageURL,
         productPrice,
       }),
-      resetForm(),
     )
+    resetForm();
   }
   return (
     <div className="admin">

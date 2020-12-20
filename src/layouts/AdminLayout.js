@@ -20,10 +20,10 @@ const AdminLayout = (props) => {
           <VerticalNav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/admin">Home</Link>
               </li>
               <li>
-                <Link className="signOut" onClick={() => signOut()}>
+                <Link to="/" className="signOut" onClick={() => signOut()}>
                   Sign Out
                 </Link>
               </li>

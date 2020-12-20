@@ -9,7 +9,7 @@ import './styles.scss'
 import AuthWrapper from './../AuthWrapper'
 import FormInput from './../forms/FormInput'
 import Button from './../forms/Button'
-
+import Modal from './../Modal'
 const mapState = ({ user }) => ({
   resetPasswordSucces: user.resetPasswordSucces,
   userErr: user.userErr,
@@ -20,11 +20,19 @@ const EmailPassword = () => {
   const { resetPasswordSucces, userErr } = useSelector(mapState)
   const [email, setEmail] = useState('')
   const [errors, setErrors] = useState([])
-
+  const [hideModal, setHideModal] = useState(true)
+  const toggleModal = () => setHideModal(!hideModal)
+  const configModal = {
+    hideModal,
+    toggleModal,
+  }
   useEffect(() => {
     if (resetPasswordSucces) {
       dispatch(resetUserState())
-      history.push('/login')
+      toggleModal()
+      setTimeout(() => {
+        history.push('/login')
+      }, 3000)
     }
     // eslint-disable-next-line
   }, [resetPasswordSucces])
@@ -41,7 +49,7 @@ const EmailPassword = () => {
   }
 
   const configAuthWrapper = {
-    headline: 'Email Password',
+    headline: 'Recover Password',
   }
   return (
     <AuthWrapper {...configAuthWrapper}>
@@ -61,9 +69,18 @@ const EmailPassword = () => {
             placeholder="Email"
             handleChange={(e) => setEmail(e.target.value)}
           />
-          <Button type="submit">Email Password</Button>
+          <Button type="submit">SUBMIT</Button>
         </form>
       </div>
+      <Modal {...configModal}>
+        <div className="modalText">
+          <h2>Email sent!</h2>
+          <h2>. . .</h2>
+          <div className="modalButton">
+            <Button onClick={() => history.push('/login')}>OK</Button>
+          </div>
+        </div>
+      </Modal>
     </AuthWrapper>
   )
 }

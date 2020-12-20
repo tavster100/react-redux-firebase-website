@@ -13,17 +13,17 @@ const Directory = () => {
             backgroundImage: `url(${ShopMen})`,
           }}
         >
-          <a> Shop Mens </a>{' '}
-        </div>{' '}
+          <a> Shop Mens </a>
+        </div>
         <div
           className="item"
           style={{
             backgroundImage: `url(${ShopWomen})`,
           }}
         >
-          <a> Shop Womens </a>{' '}
-        </div>{' '}
-      </div>{' '}
+          <a> Shop Womens </a>
+        </div>
+      </div>
     </div>
   )
 }

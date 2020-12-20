@@ -11,6 +11,9 @@ import Modal from './../../components/Modal'
 import FormInput from './../../components/forms/FormInput'
 import FormSelect from './../../components/forms/FormSelect'
 import Button from './../../components/forms/Button'
+import MetaDecorator from './../../Utils/MetaDecorator'
+
+const adminResume = require('../../pagesResume/adminpages.json')
 
 const mapState = ({ productsData }) => ({
   products: productsData.products,
@@ -51,10 +54,14 @@ const Admin = (props) => {
         productPrice,
       }),
     )
-    resetForm();
+    resetForm()
   }
   return (
     <div className="admin">
+      <MetaDecorator
+        title={adminResume.pageTitle}
+        description={adminResume.pageDescription}
+      />
       <div className="callToActions">
         <ul>
           <li>
@@ -146,7 +153,7 @@ const Admin = (props) => {
                                   className="img"
                                   src={ProductImageURL}
                                   alt="product-img"
-                                ></img>
+                                />
                               </td>
                               <td>{productName}</td>
                               <td>RON {productPrice}</td>
@@ -160,7 +167,7 @@ const Admin = (props) => {
                                     className="deleteicon"
                                     src={poweroff}
                                     alt="ShopLogo"
-                                  ></img>
+                                  />
                                 </Button>
                               </td>
                             </tr>

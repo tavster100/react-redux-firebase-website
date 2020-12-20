@@ -1,0 +1,13 @@
+.modalText{
+  height:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+  .modalButton{
+    padding-top: 38%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

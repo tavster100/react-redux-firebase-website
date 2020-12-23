@@ -12,6 +12,7 @@ import FormInput from './../../components/forms/FormInput'
 import FormSelect from './../../components/forms/FormSelect'
 import Button from './../../components/forms/Button'
 import MetaDecorator from './../../Utils/MetaDecorator'
+import LoadMore from '../../components/LoadMore'
 
 const adminResume = require('../../pagesResume/adminpages.json')
 
@@ -28,6 +29,7 @@ const Admin = (props) => {
   const [productName, setProductName] = useState('')
   const [ProductImageURL, setProductImageURL] = useState('')
   const [productPrice, setProductPrice] = useState(0)
+  const { data, queryDoc, isLastPage } = products
   useEffect(() => {
     dispatch(fetchProductsStart())
   }, []) //if (![]) =>rerender and dispatch over and over again
@@ -56,6 +58,18 @@ const Admin = (props) => {
     )
     resetForm()
   }
+  const handleLoadMore = () => {
+    dispatch(
+      fetchProductsStart({
+        startAfterDoc: queryDoc,
+        persistProducts: data,
+      }),
+    )
+  }
+  const configLoadMore = {
+    onLoadMoreEvt: handleLoadMore,
+  }
+
   return (
     <div className="admin">
       <MetaDecorator
@@ -137,43 +151,55 @@ const Admin = (props) => {
                   cellSpacing="0"
                 >
                   <tbody>
-                    <tr>
-                      <td>
-                        {products.map((product, index) => {
-                          const {
-                            productName,
-                            ProductImageURL,
-                            productPrice,
-                            documentID,
-                          } = product
-                          return (
-                            <tr key={index}>
-                              <td>
+                    {Array.isArray(data) &&
+                      data.length > 0 &&
+                      data.map((product, index) => {
+                        const {
+                          productName,
+                          ProductImageURL,
+                          productPrice,
+                          documentID,
+                        } = product
+                        return (
+                          <tr key={index}>
+                            <td>
+                              <img
+                                className="img"
+                                src={ProductImageURL}
+                                alt="product-img"
+                              />
+                            </td>
+                            <td>{productName}</td>
+                            <td>RON {productPrice}</td>
+                            <td>
+                              <Button
+                                onClick={() =>
+                                  dispatch(deleteProductStart(documentID))
+                                }
+                              >
                                 <img
-                                  className="img"
-                                  src={ProductImageURL}
-                                  alt="product-img"
+                                  className="deleteicon"
+                                  src={poweroff}
+                                  alt="ShopLogo"
                                 />
-                              </td>
-                              <td>{productName}</td>
-                              <td>RON {productPrice}</td>
-                              <td>
-                                <Button
-                                  onClick={() =>
-                                    dispatch(deleteProductStart(documentID))
-                                  }
-                                >
-                                  <img
-                                    className="deleteicon"
-                                    src={poweroff}
-                                    alt="ShopLogo"
-                                  />
-                                </Button>
-                              </td>
-                            </tr>
-                          )
-                        })}
-                      </td>
+                              </Button>
+                            </td>
+                          </tr>
+                        )
+                      })}
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <table border="0" cellPadding="10" cellSpacing="0">
+                  <tbody>
+                    <tr>
+                      <td>{!isLastPage && <LoadMore {...configLoadMore} />}</td>
                     </tr>
                   </tbody>
                 </table>

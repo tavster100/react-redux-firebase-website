@@ -12,10 +12,11 @@ const FormSelect = ({
   return (
     <div className="formRow">
       {label && <label>{label}</label>}
+      {/* eslint-disable-next-line jsx-a11y/no-onchange */}
       <select
         className="formSelect"
         value={defaultValue}
-        onBlur={handleChange}
+        onChange={handleChange}
         {...otherProps}
       >
         {options.map((option, index) => {

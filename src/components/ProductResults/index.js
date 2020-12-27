@@ -81,9 +81,7 @@ const ProductResults = ({}) => {
           )
             return null
           const configProduct = {
-            ProductImageURL,
-            productName,
-            productPrice,
+            ...product
           }
 
           return <Product key={documentID} {...configProduct} />

@@ -28,6 +28,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+
         }
     }
 
@@ -38,26 +39,48 @@
         width: 100%;
         padding: 1rem 0;
         margin: 0 auto;
-        .name {
-            font-size: 2rem;
-            line-height: 1.2;
-            font-weight: 400;
-            flex: 1;
-            margin-bottom: 1.5rem;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
+        ul, ul , li{
+            padding: 0;
+            margin: 0;
         }
-        .price {
-            font-size: 1.6rem;
-            line-height: 1;
-            font-weight: 400;
+        ul {
+            li{
+                display: flex;
+                width: 100%;
+                list-style-type: none;
+                text-align: left;
+                .name {
+                    color: black;
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    margin-bottom: 3rem;
+                    mix-blend-mode: multiply;
+
+                }
+                .name:hover {
+                    text-indent: 2px;
+                    transition: text-indent 0.3s;
+                }
+
+                .name:hover::before {
+                    display: inline-block;
+                    content: "🛒";
+                }
+                .price {
+                    font-size: 1.6rem;
+                    line-height: 1;
+                    font-weight: 400;
+                    margin-top: 1rem;
+                }
+                .addToCart {
+                    margin: 1rem 0 0 0;
+                }
+            }
         }
-        .addToCart {
-            margin: 2rem 0 0 0;
-        }
+
     }
     @media(min-width: 720px) {
         width: 25%;

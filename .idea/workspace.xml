@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdcf6b7f-c50d-40ae-9ff4-7f2702ea920a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoadMore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoadMore/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductResults/Product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/Product/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProductResults/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/FormSelect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/FormSelect/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductResults/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pagesResume/homepage.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagesResume/homepage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/Products/products.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/Products/products.helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/Products/products.sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.sagas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +58,11 @@
     <property name="ts.external.directory.path" value="D:\Webstorm\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\react-redux-firebase-ecommerce-website\src\pages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -86,7 +92,7 @@
       <workItem from="1607681580351" duration="2746000" />
       <workItem from="1608465307562" duration="10754000" />
       <workItem from="1608572515533" duration="1000" />
-      <workItem from="1608715340798" duration="16591000" />
+      <workItem from="1608715340798" duration="31891000" />
     </task>
     <servers />
   </component>

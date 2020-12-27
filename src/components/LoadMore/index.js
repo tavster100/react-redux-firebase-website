@@ -1,8 +1,13 @@
 import React from 'react'
 import Button from '../forms/Button'
-
+import './styles.scss'
 //eslint-disable-next-line
 const LoadMore = ({ onLoadMoreEvt = () => {} }) => {
-  return <Button onClick={() => onLoadMoreEvt()}>Load More</Button>
+  return (
+    <div className="loadMoreBtn">
+      <Button onClick={() => onLoadMoreEvt()}>Load More</Button>
+    </div>
+    )
+
 }
 export default LoadMore

@@ -13,6 +13,7 @@ import FormSelect from './../../components/forms/FormSelect'
 import Button from './../../components/forms/Button'
 import MetaDecorator from './../../Utils/MetaDecorator'
 import LoadMore from '../../components/LoadMore'
+import CKEditor from 'ckeditor4-react'
 
 const adminResume = require('../../pagesResume/adminpages.json')
 
@@ -29,6 +30,7 @@ const Admin = (props) => {
   const [productName, setProductName] = useState('')
   const [ProductImageURL, setProductImageURL] = useState('')
   const [productPrice, setProductPrice] = useState(0)
+  const [productDescription, setProductDescription] = useState('')
   const { data, queryDoc, isLastPage } = products
   useEffect(() => {
     dispatch(fetchProductsStart())
@@ -45,6 +47,7 @@ const Admin = (props) => {
     setProductName('')
     setProductImageURL('')
     setProductPrice(0)
+    setProductDescription('')
   }
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -54,6 +57,7 @@ const Admin = (props) => {
         productName,
         ProductImageURL,
         productPrice,
+        productDescription,
       }),
     )
     resetForm()
@@ -130,6 +134,8 @@ const Admin = (props) => {
               placeholder="Price"
               handleChange={(e) => setProductPrice(e.target.value)}
             />
+            <CKEditor onChange={(e) =>setProductDescription(e.editor.getData())}/>
+          <br/>
             <Button type="submit">Add product</Button>
           </form>
         </div>

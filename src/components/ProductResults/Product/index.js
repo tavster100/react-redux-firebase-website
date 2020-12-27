@@ -1,7 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Button from './../../forms/Button'
-const Product = ({ ProductImageURL, productName, productPrice }) => {
-  if (!ProductImageURL || !productName || typeof productPrice === 'undefined')
+const Product = ({ documentID,ProductImageURL, productName, productPrice }) => {
+  if (!documentID || !ProductImageURL || !productName || typeof productPrice === 'undefined')
     return null
   const configAddToCartBtn = {
     type: 'button',
@@ -9,14 +10,26 @@ const Product = ({ ProductImageURL, productName, productPrice }) => {
   return (
     <div className="product">
       <div className="icon">
-        <img src={ProductImageURL} alt={productName} />
+        <Link to={`/product/${documentID}`}>
+          <img src={ProductImageURL} alt={productName} />
+        </Link>
       </div>
       <div className="details">
-        <span className="name" title={productName}>{productName}</span>
-        <span className="price">RON{productPrice}</span>
-        <div className="addToCart">
-          <Button {...configAddToCartBtn}>Add to cart</Button>
-        </div>
+        <ul>
+          <li>
+            <Link to={`/product/${documentID}`}>
+              <span className="name" >{productName}</span>
+            </Link>
+          </li>
+          <li>
+            <span className="price">RON{productPrice}</span>
+          </li>
+          <li>
+            <div className="addToCart">
+              <Button {...configAddToCartBtn}>Add to cart</Button>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   )

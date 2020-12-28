@@ -60,6 +60,17 @@
             -webkit-transform: translateY(-50%);
             -moz-transform: translateY(-50%);
             transform: translateY(-50%);
+            .cartLogo {
+                width: 4rem;
+                position: absolute;
+                top: -20%;
+                left: -4.5rem;
+                img{
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
             ul,
             li {
                 margin: 0;

@@ -1,18 +1,22 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { signOutUserStart } from './../../redux/User/user.actions'
+import { signOutUserStart } from '../../redux/User/user.actions'
+import { selectCartItemsCount } from '../../redux/Cart/cart.selectors'
 import './styles.scss'
 import { Link } from 'react-router-dom'
 // import { auth } from './../../firebase/utils'
 import Logo from './../../assets/logo.png'
+//eslint-disable-next-line
+import cartLogo from './../../assets/cartLogo.png'
 
-const mapState = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapState = (state) => ({
+  currentUser: state.user.currentUser,
+  totalNumberCartItems: selectCartItemsCount(state),
 })
 //eslint-disable-next-line
 const Header = (props) => {
   const dispatch = useDispatch()
-  const { currentUser } = useSelector(mapState)
+  const { currentUser, totalNumberCartItems } = useSelector(mapState)
   const signOut = () => {
     dispatch(signOutUserStart())
   }
@@ -36,28 +40,32 @@ const Header = (props) => {
           </ul>
         </nav>
         <div className="callToActions">
-          {currentUser && (
-            <ul>
-              <li>
-                <Link to={'/dashboard'}>Profile </Link>
-              </li>
-              <li>
+          <ul>
+            <li>
+              <Link>
+                <img className={'cartLogo'} src={cartLogo} alt={'cartLogo'} /> ( { totalNumberCartItems} )
+              </Link>
+            </li>
+            {currentUser && [
+              <li key={1}>
+                <Link to={'/dashboard'}>My Account </Link>
+              </li>,
+              <li key={2}>
                 <button className="btn" onClick={() => signOut()}>
                   LogOut
                 </button>
-              </li>
-            </ul>
-          )}
-          {!currentUser && (
-            <ul>
-              <li>
+              </li>,
+            ]}
+
+            {!currentUser && [
+              <li key={1}>
                 <Link to={'/registration'}>Register </Link>
-              </li>
-              <li>
+              </li>,
+              <li key={2}>
                 <Link to={'/login'}>Login </Link>
-              </li>
-            </ul>
-          )}
+              </li>,
+            ]}
+          </ul>
         </div>
       </div>
     </header>

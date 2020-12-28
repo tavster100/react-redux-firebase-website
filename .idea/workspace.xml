@@ -4,18 +4,13 @@
     <list default="true" id="fdcf6b7f-c50d-40ae-9ff4-7f2702ea920a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoadMore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoadMore/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductCard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProductResults/Product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/Product/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductResults/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductResults/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.sagas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Products/products.types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Products/products.types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Workspace2/Project1_github" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -92,7 +87,8 @@
       <workItem from="1607681580351" duration="2746000" />
       <workItem from="1608465307562" duration="10754000" />
       <workItem from="1608572515533" duration="1000" />
-      <workItem from="1608715340798" duration="31891000" />
+      <workItem from="1608715340798" duration="36130000" />
+      <workItem from="1609162746240" duration="9078000" />
     </task>
     <servers />
   </component>

@@ -42,7 +42,7 @@ const Header = (props) => {
         <div className="callToActions">
           <ul>
             <li>
-              <Link>
+              <Link to={'/cart'}>
                 <img className={'cartLogo'} src={cartLogo} alt={'cartLogo'} /> ( { totalNumberCartItems} )
               </Link>
             </li>

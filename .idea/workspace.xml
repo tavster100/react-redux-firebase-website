@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fdcf6b7f-c50d-40ae-9ff4-7f2702ea920a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductCard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductResults/Product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductResults/Product/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Cart/cart.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Cart/cart.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Cart/cart.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Cart/cart.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Cart/cart.selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Cart/cart.selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Cart/cart.types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Cart/cart.types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Cart/cart.utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Cart/cart.utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <workItem from="1608465307562" duration="10754000" />
       <workItem from="1608572515533" duration="1000" />
       <workItem from="1608715340798" duration="36130000" />
-      <workItem from="1609162746240" duration="9078000" />
+      <workItem from="1609162746240" duration="19722000" />
     </task>
     <servers />
   </component>

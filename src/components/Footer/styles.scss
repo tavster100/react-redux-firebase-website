@@ -2,11 +2,11 @@
     background: #28208d;
     border: 1px solid black;
     display: flex;
+    box-shadow: 1px 1px 3px #888;
     .wrap {
         max-width: 1450px;
         margin: 0 auto;
         padding: 20px 10px;
         color: white;
-
     }
 }

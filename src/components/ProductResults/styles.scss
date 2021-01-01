@@ -51,14 +51,13 @@
                 text-align: left;
                 .name {
                     color: black;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     line-height: 1.2;
                     font-weight: 400;
                     text-overflow: ellipsis;
                     display: -webkit-box;
                     margin-bottom: 3rem;
                     mix-blend-mode: multiply;
-
                 }
                 .name:hover {
                     text-indent: 2px;

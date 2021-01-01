@@ -83,7 +83,12 @@ const Checkout = ({}) => {
           </tbody>
         </table>
         ) : (
-          <p>{errMsg}</p>
+          <div className="noItems">
+            <h1 className="text">{errMsg}</h1>
+            <Button onClick={()=>history.push('/search')}>
+              Back to shop
+            </Button>
+          </div>
         )}
       </div>
     </div>

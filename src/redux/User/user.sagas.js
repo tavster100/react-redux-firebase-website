@@ -11,7 +11,7 @@ import {
   auth,
   getCurrentUser,
   GoogleProvider,
-} from './../../firebase/utils'
+} from '../../firebase/utils'
 import { handleResetPasswordAPI } from './user.helpers'
 
 export function* getSnapshotFromUserAuth(user, additionalData = {}) {

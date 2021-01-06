@@ -6,7 +6,7 @@ import {
   deleteProductStart,
 } from './../../redux/Products/products.actions'
 import './styles.scss'
-import poweroff from './../../assets/poweroff.png'
+import bin from './../../assets/bin.png'
 import Modal from './../../components/Modal'
 import FormInput from './../../components/forms/FormInput'
 import FormSelect from './../../components/forms/FormSelect'
@@ -178,14 +178,13 @@ const Admin = (props) => {
                             <td>{productName}</td>
                             <td>RON {productPrice}</td>
                             <td>
-                              <Button
+                              <Button className="deleteicon"
                                 onClick={() =>
                                   dispatch(deleteProductStart(documentID))
                                 }
                               >
                                 <img
-                                  className="deleteicon"
-                                  src={poweroff}
+                                  src={bin}
                                   alt="ShopLogo"
                                 />
                               </Button>

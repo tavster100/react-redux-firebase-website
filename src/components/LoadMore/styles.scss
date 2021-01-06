@@ -1,7 +1,14 @@
 .loadMoreBtn{
-  display: flex;
-  flex-flow: column wrap;
-  margin-left: 50rem;
-  padding-top: 20px;
-  max-width: 30%;
+  display: block;
+  .btn{
+    margin-top: 5rem;
+    align-self: center;
+    width: 100%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.1);
+    &:hover {
+      background-color: white;
+      color: black;
+      transition: all 0.4s ease-in-out;
+    }
+  }
 }

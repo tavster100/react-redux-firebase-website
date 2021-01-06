@@ -5,10 +5,11 @@ import Button from '../forms/Button'
 import { CountryDropdown } from 'react-country-region-selector'
 import './styles.scss'
 import { apiInstance } from '../../Utils'
-import { selectCartItemsCount, selectCartTotal } from '../../redux/Cart/cart.selectors'
+import { selectCartItemsCount, selectCartTotal ,selectCartItems} from '../../redux/Cart/cart.selectors'
+import {saveOrderHistory} from '../../redux/Orders/orders.actions'
 import { createStructuredSelector } from 'reselect'
 import { useSelector ,useDispatch } from 'react-redux'
-import {clearCart} from '../../redux/Cart/cart.actions'
+//import {clearCart} from '../../redux/Cart/cart.actions'
 import {useHistory} from 'react-router-dom'
 
 const initialAddressState = {
@@ -21,7 +22,8 @@ const initialAddressState = {
 }
 const mapState = createStructuredSelector({
   total: selectCartTotal,
-  itemCount:selectCartItemsCount
+  itemCount:selectCartItemsCount,
+  cartItems:selectCartItems,
 })
 const PaymentDetails = () => {
   //eslint-disable-next-line
@@ -29,7 +31,7 @@ const PaymentDetails = () => {
   const dispatch = useDispatch()
   const stripe = useStripe()
   const elements = useElements()
-  const { total ,itemCount } = useSelector(mapState)
+  const { total ,itemCount ,cartItems } = useSelector(mapState)
   //creating a basic object that can handle shipping and billing
   const [billingAddress, setBillingAddress] = useState({
     ...initialAddressState,
@@ -42,7 +44,7 @@ const PaymentDetails = () => {
 
   useEffect(()=>{
     if(itemCount<1){
-      history.push('/')
+      history.push('/dashboard')
     }
   },[itemCount])
   const handleShipping = (evt) => {
@@ -106,8 +108,24 @@ const PaymentDetails = () => {
               .confirmCardPayment(clientSecret, {
                 payment_method: paymentMethod.id,
               })
+              // eslint-disable-next-line no-unused-vars
               .then(({ paymentIntent }) => {
-                  dispatch(clearCart(paymentIntent))
+
+                const configOrder = {
+                  orderTotal: total,
+                  orderItems: cartItems.map(item => {
+                    const {documentID,ProductImageURL,productName,productPrice,quantity} = item
+                    return{
+                      documentID,
+                      ProductImageURL,
+                      productPrice,
+                      productName,
+                      quantity
+                    }
+                  })
+                }
+                dispatch(saveOrderHistory(configOrder))
+
               })
           })
       })

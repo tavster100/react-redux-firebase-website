@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import ShopMen from './../../assets/shopMens1.jpg'
-import ShopWomen from './../../assets/shopWomens2.jpg'
+import ShopMen from './../../assets/shopMens2.jpg'
+import ShopWomen from './../../assets/shopWomens3.jpg'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 const Directory = () => {
   return (
-    <div className="directory">
+    <section className="directory">
       <div className="wrap">
         <div
           className="item"
@@ -15,7 +15,7 @@ const Directory = () => {
           }}
         >
           <Link to={'/search/mens'} >
-            <span className="linkShops"> Shop Mens </span>
+            <span className="linkShops">Shop Mens</span>
           </Link>
         </div>
         <div
@@ -25,12 +25,11 @@ const Directory = () => {
           }}
         >
           <Link to={'/search/womens'}>
-          <span className='linkShops'> Shop Womens </span>
+          <span className='linkShops'>Shop Womens</span>
         </Link>
-
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

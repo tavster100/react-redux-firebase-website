@@ -6,6 +6,7 @@ import { signOutUserStart } from './../redux/User/user.actions'
 import Header from './../components/Header'
 import Footer from './../components/Footer'
 import VerticalNav from './../components/VerticalNav'
+
 const AdminLayout = (props) => {
   const dispatch = useDispatch()
 

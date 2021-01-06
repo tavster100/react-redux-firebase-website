@@ -5,9 +5,9 @@ import { selectCartItemsCount } from '../../redux/Cart/cart.selectors'
 import './styles.scss'
 import { Link } from 'react-router-dom'
 // import { auth } from './../../firebase/utils'
-import Logo from './../../assets/logo.png'
+import Logo from './../../assets/ShopLogo.jpg'
 //eslint-disable-next-line
-import cartLogo from './../../assets/cartLogo.png'
+import cartLogo1 from './../../assets/cartLogo1.png'
 
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
@@ -30,20 +30,21 @@ const Header = (props) => {
           </Link>
         </div>
         <nav>
-          <ul>
-            <li>
-              <Link to={'/'}>Home</Link>
-            </li>
-            <li>
-              <Link to={'/search'}>Search</Link>
+          <ul >
+            <li >
+              <Link className='linksStyle' to={'/'}>Home</Link>
+            </li >
+            <li >
+              <Link className='linksStyle' to={'/search'}>Search</Link>
             </li>
           </ul>
         </nav>
         <div className="callToActions">
           <ul>
             <li>
-              <Link to={'/cart'}>
-                <img className={'cartLogo'} src={cartLogo} alt={'cartLogo'} /> ( { totalNumberCartItems} )
+              <Link to={'/cart'} >
+                  <img className='cartLogo' src={cartLogo1} alt={'cartLogo'} />
+                  <p className='cartNumber'>{ totalNumberCartItems} </p>
               </Link>
             </li>
             {currentUser && [

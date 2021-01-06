@@ -1,9 +1,10 @@
 .directory {
-    height: 100%;
+    height: 70vh;
     .wrap {
         display: inline-block;
         width: 100%;
         height: 100%;
+        //box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.1);
         .item {
             position: relative;
             width: 50%;
@@ -12,35 +13,46 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            border: 1px solid black;
             &::after {
                 content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
                 background: rgba(0, 0, 0, 0.3);
-                z-index: 1;
+                z-index: 0.1;
                 width: 100%;
                 height: 100%;
             }
+
             .linkShops {
+                text-shadow: 2px 2px black;
                 position: absolute;
                 z-index: 2;
                 top: 60%;
                 left: 50%;
-                background: #F5F5F5;
-                min-width: 18rem;
+                background: none;
                 text-align: center;
-                color: black;
-                -webkit-transforbhm: translate(-50%, -50%);
+                color: whitesmoke;
+                -webkit-transform: translate(-50%, -50%);
                 -moz-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-                font-size: 2rem;
+                font-size: 4.6rem;
                 line-height: 1;
                 font-weight: 400;
                 text-transform: uppercase;
                 padding: 5px 6px;
                 border-left: 1px solid black;
+                border-color: whitesmoke;
+            }
+
+            .linkShops:hover {
+                text-indent: 2rem;
+                transition: text-indent 1s;
+            }
+
+            .linkShops:hover::before {
+                display: inline-block;
+                content: "  ";
             }
         }
     }

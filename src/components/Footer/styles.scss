@@ -1,12 +1,12 @@
 .footer {
-    background: #28208d;
-    border: 1px solid black;
+    background: whitesmoke;
     display: flex;
-    box-shadow: 1px 1px 3px #888;
+    box-shadow: 2px 0px 4px 2px rgba(0, 0, 0, 0.1);
     .wrap {
         max-width: 1450px;
         margin: 0 auto;
         padding: 20px 10px;
-        color: white;
+        color: black;
+        text-align: left;
     }
 }

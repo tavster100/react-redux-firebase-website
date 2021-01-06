@@ -62,11 +62,11 @@ const ProductResults = ({}) => {
     onLoadMoreEvt:handleLoadMore
   }
   return (
-    <div className="products">
+    <div className="products" >
       <h1>Browse Products</h1>
       <FormSelect  {...configFilters}/>
       <div className="productResults">
-        {data.map((product, pos) => {
+        {data.map((product) => {
           const {
             ProductImageURL,
             productName,
@@ -78,14 +78,14 @@ const ProductResults = ({}) => {
             !ProductImageURL ||
             !productName ||
             typeof productPrice === 'undefined'
-          )
-            return null
-          const configProduct = {
-            ...product
+          ) {
+            return null;
           }
 
-          return <Product key={documentID} {...configProduct} />
-        })}
+
+          return <Product key={documentID} product={product} />
+        })
+        }
       </div>
       {!isLastPage &&(<LoadMore {...configLoadMore}/>)}
 

@@ -39,9 +39,9 @@ const Item = (product) => {
           <td>{productName}</td>
 
           <td>
-            <Button className="cartBtn" onClick={()=>handleReduceItem(product)}>{`◄`}</Button>
+            <Button className="cartBtnQuantity" onClick={()=>handleReduceItem(product)}>{`◄`}</Button>
             <span> { quantity } </span>
-            <Button className="cartBtn" onClick={()=>handleAddProduct(product)}>{`►`}</Button>
+            <Button className="cartBtnQuantity" onClick={()=>handleAddProduct(product)}>{`►`}</Button>
           </td>
 
           <td>{productPrice} RON</td>

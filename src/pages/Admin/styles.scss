@@ -29,14 +29,18 @@
                 background-color: #d3d3d3;
             }
             .img {
-                width: 70px;
+                width: 100px;
                 margin: 0 auto;
             }
             .deleteicon {
-                width: 20px;
+                cursor: pointer;
+                width: 4rem;
                 margin: 0;
-                height: 20px;
+                height: 4rem;
                 padding: 0;
+                img{
+                    width: 2rem;
+                }
             }
         }
     }

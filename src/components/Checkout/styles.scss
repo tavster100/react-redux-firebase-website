@@ -1,6 +1,6 @@
 .checkout{
   margin:2rem auto;
-
+  // box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.1);
   h1{
     display: block;
     width: 100%;
@@ -12,8 +12,9 @@
     border-bottom: 1px solid black;
   }
   .cart{
+    box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.1);
     max-width: 120rem;
-    margin:0 auto;
+    margin:2rem auto 19rem;
     table{
       width: 100%;
     }
@@ -31,14 +32,31 @@
   .cartItem{
     padding-top: 1rem;
     td img {
+      box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.1);
       display: block;
       width: 50%;
     }
   }
   .cartBtn{
     cursor: pointer;
-    width: 30%;
-    height: 2.5rem;
+    width: 50%;
+    height: 3.5rem;
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.1);
+  }
+  .cartBtnQuantity{
+  background-color: black;
+    cursor: pointer;
+    color: white;
+    border: 1px solid black;
+    width: 3.5rem;
+    border-radius: 2rem;
+    &:hover {
+      border: 1px solid  black;
+      background-color: white;
+      color: black;
+      transition: all 0.4s ease-in-out;
+    }
   }
   .noItems{
     display: flex;
@@ -48,9 +66,25 @@
       flex: 1;
       font-size: 1.5rem;
     }
-    .btn{
-      width: 20rem;
+    .btn
+    { width: 20rem;
+      margin-bottom: 2rem;
       align-self: center;
+        &:hover {
+          border: 1px solid  black;
+          background-color: white;
+          color: black;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+  }
+  .btn
+  {  align-self: center;
+    &:hover {
+      border: 1px solid  black;
+      background-color: white;
+      color: black;
+      transition: all 0.4s ease-in-out;
     }
   }
 }

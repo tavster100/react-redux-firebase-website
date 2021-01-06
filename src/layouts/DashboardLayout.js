@@ -7,6 +7,7 @@ import Header from './../components/Header'
 import Footer from './../components/Footer'
 import VerticalNav from './../components/VerticalNav'
 
+
 //redux part
 
 const DashBoardLayout = (props) => {
